@@ -1,0 +1,26 @@
+{
+  "name": "maxima-scss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "git:a": "git add .",
+    "git:b": "git commit -m 'commit'",
+    "git:c": "git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lekso4ka/maxima-scss.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lekso4ka/maxima-scss/issues"
+  },
+  "homepage": "https://github.com/Lekso4ka/maxima-scss#readme",
+  "description": "",
+  "dependencies": {
+    "sass": "^1.83.4"
+  }
+}
