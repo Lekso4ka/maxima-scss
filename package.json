@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "git:a": "git add .",
     "git:b": "git commit -m 'commit'",
-    "git:c": "git push"
+    "git:c": "git push",
+    "css": "sass ./scss/style.scss ./style.css",
+    "css:test": "sass ./scss/style.scss ./style.css --watch"
   },
   "repository": {
     "type": "git",

@@ -1,10 +1,88 @@
+$size: 10px;
+$cnt: 3;
+$color: seagreen;
+
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin effect($aft) {
+    transition: backdrop-filter 500ms;
+    @if $aft == true {
+        &:hover::after {
+            backdrop-filter: blur(0);
+        }
+    }
+    @if $aft != true {
+        &:hover {
+            backdrop-filter: blur(0);
+        }
+    }
+    
+}
+
 body {
     margin: 0;
-    background-color: darkorchid;
+    background-color: $color;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     font-family: sans-serif;
-    font-size: 5rem;
+    // font-size: 7rem;
+    display: grid;
+    grid-template-columns: repeat($cnt, auto);
+    grid-template-rows: repeat($cnt, auto);
+    justify-content: center;
+    align-content: center;
+    gap: $size * 2;
+    background-image: url("img/rain.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto $size * 34;
+}
+
+.card {
+    width: $size * 10;
+    height: $size * 10;
+    border-radius: $size;
+    background-color: #ffffff63;
+    /* filter: invert(100%) grayscale(100%) blur(0px) */
+    backdrop-filter: blur(3px);
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @include center;
+    @include effect(false);
+    position: relative;
+    i {
+        width: $size * 5;
+        height: $size * 5;
+        background-color: $color;
+        border-radius: 50%;
+        @include center;
+        position: relative;
+        font-size: $size * 2.5;
+        @include effect(true);
+        
+        /* & - для текущего тега (i)*/
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ffffff36;
+            border-radius: 50%;
+            box-shadow: 0 0 $size / 4 $color;
+            backdrop-filter: blur(4px);
+            
+        }
+        
+    }
+
 }

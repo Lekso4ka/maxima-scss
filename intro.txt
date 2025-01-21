@@ -1,5 +1,7 @@
 div>p*2+a*3>lorem10
 
-sass -> scss
-less
-stylus
+sass -> scss  https://sass-lang.com/
+less          https://lesscss.org/   
+stylus        https://stylus-lang.com/docs/
+
+https://habr.com/ru/articles/130886/
